@@ -4,8 +4,7 @@ This project involves using deep learning to investigate positive selection in m
 
 ## Table of Contents
 
-[Project Background](## Project Background)
-[Aims](## Aims)
+
 
 ## Project Background
 Positive selection has shaped all species which occurs when beneficial traits increase in frequency in populations over time. This is due to them increasing the survival and reproduction rate of individuals carrying these traits. Identifying positive selection in the genome has been the main aim of many evolutionary genetic research. By doing so, an understanding of the genetic mechanisms underlying adaptations can be achieved. 
