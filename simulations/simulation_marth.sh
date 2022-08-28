@@ -30,7 +30,7 @@ NCHROMS=202 # number of chromosomal copies to simulate
 ## 4) SELECTION
 #simulation for CR1 gene with 0.01 selection coefficient
 
-SELPOS=`bc <<< 'scale=2; 1/2'` # relative position of selected allele
+SELPOS=`bc <<< 'scale=2; 1/2'` # relative position of selected allele in the centre
 FREQ=`bc <<< 'scale=6; 2/100'` # frequency of selected allele at start of selection
 SELRANGE=`seq 0 200 200`
 NREPL=10000 # number of replicates (simulations) per value of selection coefficient to be estimated
