@@ -26,8 +26,9 @@ RHO=32 # recombination rate (rho) in 4*Ne*r*(LEN-1); 40 corresponds to 1e-8 for 
 NCHROMS=202 # number of chromosomal copies to simulate
 
 ## 4) SELECTION
+#simulation for FY gene with 0.01 selection coefficient
 
-SELPOS=`bc <<< 'scale=2; 1/2'` # relative position of selected allele
+SELPOS=`bc <<< 'scale=2; 1/2'` # relative position of selected allele in the centre
 FREQ=`bc <<< 'scale=6; 3/100'` # frequency of selected allele at start of selection
 SELRANGE=`seq 0 200 200`
 NREPL=10000 # number of replicates (simulations) per value of selection coefficient to be estimated
