@@ -59,36 +59,5 @@ def sum_stats(haplotype_array, csv_path):
     np.savetxt(csv_path,np.c_[pwise,tajima_res, h11_res,h121_res,h2_h11_res, h1231_res,hap_div1_res,mean_ehh1_res,median_nsl1_res], delimiter=",")
 
 
-def stats_to_csv(haplotype_array, clss, csv_path):
-    """
-    Converts the stats values and labels into a csv file
-    Parameters:
-        haplotype_array: takes haplotype array as input
-        clss: class. Either "selection" or "neutral"
-        csv_path: path for csv output file
-    """
-    #perform summary statistics
-    labels, stats = sum_stats(haplotype_array)
-    
-    #identify whether class is neutral or selection
-    if clss=="selection":
-        sel_class = ["selection"] * 11 #number of stats
-    else:
-        sel_class = ["neutral"] * 11
-    
-    #rows of csv
-    rows = zip(labels, stats)
-    print(stats)
-    import csv
-
-    with open(csv_path, "w") as infile:
-        writer = csv.writer(infile)
-        writer.writerow(['Mean(MeanPwiseDist)','Tajimas D','Mean(ObservedHet)', 'Mean(Obs/Exp Het)', 
-            'H1','H12','H123', 'H2/H1', 'Haplotype Diversity', 'Mean(EHH)', 'Median(nsl)']) #Write Header
-        writer.writerow(stats) #Write Content
-    
-
-    
-
 
             
