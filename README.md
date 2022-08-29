@@ -24,15 +24,25 @@ This project was developed as part of the MSc Bioinformatics programme at Queen 
 
 ### Imagene
 
-Firstly population genomic data was simulated using *msms* which is implemented using the software [ImaGene](https://github.com/mfumagalli/ImaGene).
+Firstly population genomic data was simulated using *msms* which is implemented using the software [ImaGene](https://github.com/mfumagalli/ImaGene) [2]. Two demographic models were used, the Marth et al. demographic model [3] and the Tennessen et al. demographic model [4].
 The simulations were ran on Queen Mary's High Performance Compute Cluster where the scripts are in the HPC folder.
 
-CNNS were implmented using the software [ImaGene](https://github.com/mfumagalli/ImaGene).
+CNNS were used to investigate positive selection through a binary classification implmented using the software [ImaGene](https://github.com/mfumagalli/ImaGene). In addition to following the binary classficiation tutorial on [ImaGene](https://github.com/mfumagalli/ImaGene/blob/master/Tutorials/01_binary.ipynb), the CNN was also ran on the HPC to allow for parallel processing.
 
+Once training and testing was complete, the model was then deployed onto real genomic data to predice positive selection or neutral.
 
+### Summary Statistics
+
+Summary statistics were calculated for each gene tailored simulation based on the Tennessen et al. demographic model. This consisted of dividing the simulations into their retrospective classes first before processing them. The processing consisted of sorting the images using a minimum allele frequency, sorting the rows by frequency and resizing the images to that of the real genomic data.
+
+Summary statistics were then calculated for each class and the values were standardised so that boxplots could be produced to compare the neutral and selection class.
 
 
 ## References
 [1] Arnaud Nguembang Fadja, Fabrizio Riguzzi, Giorgio Bertorelle, and Emiliano Trucchi. Identification of natural selection in genomic data with deep convolutional neural network. BioData Mining, 14(1):1–18, 2021 
 
 [2] Luis Torada, Lucrezia Lorenzon, Alice Beddis, Ulas Isildak, Linda Pattini, Sara Mathieson, and Matteo Fumagalli. Imagene: a convolutional neural network to quantify natural selection from genomic data. BMC bioinformatics, 20(9):1–12, 2019
+
+[3] Gabor T Marth, Eva Czabarka, Janos Murvai, and Stephen T Sherry. The allele frequency spectrum in genome-wide human variation data reveals signals of differential demographic history in three large world populations. Genetics, 166(1):351–372, 2004.
+
+[4] Jacob A Tennessen, Abigail W Bigham, Timothy D O’connor, Wenqing Fu, Eimear E Kenny, Simon Gravel, Sean McGee, Ron Do, Xiaoming Liu, Goo Jun, et al. Evolution and functional impact of rare coding variation from deep sequencing of human exomes. science, 337(6090):64–69, 2012.
