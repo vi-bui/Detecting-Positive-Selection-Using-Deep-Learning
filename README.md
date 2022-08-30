@@ -22,9 +22,13 @@ This project was developed as part of the MSc Bioinformatics programme at Queen 
 
 ## Methodology
 
+### Data
+
+Population genomic data was obtained from the 1000 Genomes Project Phase 3 [3]. The VCF files were filtered for African populations based on sample IDs and 80 kbp around the single nucleotide polymorphirm (SNPs) of interest. This was done by using bcftools [4]. New VCF files for each population for each SNPs were produced.
+
 ### Imagene
 
-Firstly population genomic data was simulated using *msms* which is implemented using the software [ImaGene](https://github.com/mfumagalli/ImaGene) [2]. Two demographic models were used, the Marth et al. demographic model [3] and the Tennessen et al. demographic model [4].
+Firstly population genomic data was simulated using *msms* which is implemented using the software [ImaGene](https://github.com/mfumagalli/ImaGene) [2]. Two demographic models were used, the Marth et al. demographic model [5] and the Tennessen et al. demographic model [6].
 The simulations were ran on Queen Mary's High Performance Compute Cluster where the scripts are in the HPC folder.
 
 CNNS were used to investigate positive selection through a binary classification implmented using the software [ImaGene](https://github.com/mfumagalli/ImaGene). In addition to following the binary classficiation tutorial on [ImaGene](https://github.com/mfumagalli/ImaGene/blob/master/Tutorials/01_binary.ipynb), the CNN was also ran on the HPC to allow for parallel processing.
@@ -43,6 +47,10 @@ Summary statistics were then calculated for each class and the values were stand
 
 [2] Luis Torada, Lucrezia Lorenzon, Alice Beddis, Ulas Isildak, Linda Pattini, Sara Mathieson, and Matteo Fumagalli. Imagene: a convolutional neural network to quantify natural selection from genomic data. BMC bioinformatics, 20(9):1–12, 2019
 
-[3] Gabor T Marth, Eva Czabarka, Janos Murvai, and Stephen T Sherry. The allele frequency spectrum in genome-wide human variation data reveals signals of differential demographic history in three large world populations. Genetics, 166(1):351–372, 2004.
+[3] 1000 Genomes Project Consortium Corresponding authors Auton Adam adam. auton@ gmail. com 1 b Abecasis Gonçalo R. goncalo@ umich. edu 2 c, Production group Bay- lor College of Medicine Gibbs Richard A.(Principal Investigator) 14 Boerwinkle Eric 14 Doddapaneni Harsha 14 Han Yi 14 Korchina Viktoriya 14 Kovar Christie 14 Lee San- dra 14 Muzny Donna 14 Reid Jeffrey G. 14 Zhu Yiming 14, Broad Institute of MIT, Harvard Lander Eric S.(Principal Investigator) 13 Altshuler David M. 3 Gabriel Stacey B.(Co-Chair) 13 Gupta Namrata 13, Coriell Institute for Medical Research Gharani Neda 31 Toji Lorraine H. 31 Gerry Norman P. 31 Resch Alissa M. 31, Illumina Bentley David R.(Principal Investigator) 5 Grocock Russell 5 Humphray Sean 5 James Terena 5 Kings- bury Zoya 5, McDonnell Genome Institute at Washington University Mardis Elaine R.(Co- Principal Investigator)(Co-Chair) 22 Wilson Richard K.(Co-Principal Investigator) 22 Ful- ton Lucinda 22 Fulton Robert 22, et al. A global reference for human genetic variation. Nature, 526(7571):68–74, 2015.
 
-[4] Jacob A Tennessen, Abigail W Bigham, Timothy D O’connor, Wenqing Fu, Eimear E Kenny, Simon Gravel, Sean McGee, Ron Do, Xiaoming Liu, Goo Jun, et al. Evolution and functional impact of rare coding variation from deep sequencing of human exomes. science, 337(6090):64–69, 2012.
+[4] Heng Li. A statistical framework for snp calling, mutation discovery, association map- ping and population genetical parameter estimation from sequencing data. Bioinformatics, 27(21):2987–2993, 2011.
+
+[5] Gabor T Marth, Eva Czabarka, Janos Murvai, and Stephen T Sherry. The allele frequency spectrum in genome-wide human variation data reveals signals of differential demographic history in three large world populations. Genetics, 166(1):351–372, 2004.
+
+[6] Jacob A Tennessen, Abigail W Bigham, Timothy D O’connor, Wenqing Fu, Eimear E Kenny, Simon Gravel, Sean McGee, Ron Do, Xiaoming Liu, Goo Jun, et al. Evolution and functional impact of rare coding variation from deep sequencing of human exomes. science, 337(6090):64–69, 2012.
