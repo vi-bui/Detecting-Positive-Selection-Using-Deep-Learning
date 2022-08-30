@@ -24,7 +24,7 @@ This project was developed as part of the MSc Bioinformatics programme at Queen 
 
 ### Data
 
-Population genomic data was obtained from the 1000 Genomes Project Phase 3 [3]. The VCF files were filtered for African populations based on sample IDs and 80 kbp around the single nucleotide polymorphirm (SNPs) of interest. This was done by using bcftools [4]. New VCF files for each population for each SNPs were produced.
+Population genomic data was obtained from the 1000 Genomes Project Phase 3 [3]. The VCF files were filtered for African populations based on sample IDs and 80 kbp around the single nucleotide polymorphirm (SNPs) of interest. This was done by using the programme bcftools [4]. New VCF files for each population for each SNPs were produced.
 
 ### Imagene
 
@@ -43,9 +43,9 @@ Summary statistics were then calculated for each class and the values were stand
 
 
 ## References
-[1] Arnaud Nguembang Fadja, Fabrizio Riguzzi, Giorgio Bertorelle, and Emiliano Trucchi. Identification of natural selection in genomic data with deep convolutional neural network. BioData Mining, 14(1):1–18, 2021 
+[1] Arnaud Nguembang Fadja, Fabrizio Riguzzi, Giorgio Bertorelle, and Emiliano Trucchi. Identification of natural selection in genomic data with deep convolutional neural network. BioData Mining, 14(1):1–18, 2021.
 
-[2] Luis Torada, Lucrezia Lorenzon, Alice Beddis, Ulas Isildak, Linda Pattini, Sara Mathieson, and Matteo Fumagalli. Imagene: a convolutional neural network to quantify natural selection from genomic data. BMC bioinformatics, 20(9):1–12, 2019
+[2] Luis Torada, Lucrezia Lorenzon, Alice Beddis, Ulas Isildak, Linda Pattini, Sara Mathieson, and Matteo Fumagalli. Imagene: a convolutional neural network to quantify natural selection from genomic data. BMC bioinformatics, 20(9):1–12, 2019.
 
 [3] 1000 Genomes Project Consortium Corresponding authors Auton Adam adam. auton@ gmail. com 1 b Abecasis Gonçalo R. goncalo@ umich. edu 2 c, Production group Bay- lor College of Medicine Gibbs Richard A.(Principal Investigator) 14 Boerwinkle Eric 14 Doddapaneni Harsha 14 Han Yi 14 Korchina Viktoriya 14 Kovar Christie 14 Lee San- dra 14 Muzny Donna 14 Reid Jeffrey G. 14 Zhu Yiming 14, Broad Institute of MIT, Harvard Lander Eric S.(Principal Investigator) 13 Altshuler David M. 3 Gabriel Stacey B.(Co-Chair) 13 Gupta Namrata 13, Coriell Institute for Medical Research Gharani Neda 31 Toji Lorraine H. 31 Gerry Norman P. 31 Resch Alissa M. 31, Illumina Bentley David R.(Principal Investigator) 5 Grocock Russell 5 Humphray Sean 5 James Terena 5 Kings- bury Zoya 5, McDonnell Genome Institute at Washington University Mardis Elaine R.(Co- Principal Investigator)(Co-Chair) 22 Wilson Richard K.(Co-Principal Investigator) 22 Ful- ton Lucinda 22 Fulton Robert 22, et al. A global reference for human genetic variation. Nature, 526(7571):68–74, 2015.
 
